@@ -5,8 +5,6 @@ public class Persona {
     private String apellido;
     private int edad;
     
-
-    
     //Constructor
     public Persona(String nombre, String apellido, int edad){
         this.nombre = nombre;
@@ -16,7 +14,6 @@ public class Persona {
         
     }
     
-
     //Metodos (comportamiento de un objeto)
     public String darNombreCompleto(){
         return getApellido()+", "+getNombre();
@@ -25,20 +22,36 @@ public class Persona {
         if (edad>40) return "Buenos dias, querido "+personaASaludar;
         return "Hola, como estas "+personaASaludar+"?";
     }
-    
-    public int getEdad(){
-        return this.edad;
+
+    //GETTERS y SETTERS
+    public String getNombre() {
+        return nombre;
     }
-    public String getNombre(){
-        return this.nombre.toUpperCase();
-    }
-    public void setNombre(String nombre){
+
+
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    public String getApellido(){
-        return this.apellido.toUpperCase();
+
+
+    public String getApellido() {
+        return apellido;
     }
-    public void setApellido(String apellido){
+
+
+    public void setApellido(String apellido) {
         this.apellido = apellido;
     }
+
+
+    public int getEdad() {
+        return edad;
+    }
+
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+     
+    
 }
